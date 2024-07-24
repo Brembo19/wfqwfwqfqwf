@@ -1,6 +1,5 @@
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local StarterGui = game:GetService("StarterGui")
 
 -- Правилен ключ
 local correctKey = "x0xslotsxlx"
@@ -95,9 +94,4 @@ Players.PlayerAdded:Connect(function(player)
     player.CharacterAdded:Connect(function()
         createKeySystemGui(player)
     end)
-end)
-
-ReplicatedStorage.SetClipboard.OnClientEvent:Connect(function(link)
-    setclipboard(link)
-    print("Key link copied to clipboard!")
 end)
